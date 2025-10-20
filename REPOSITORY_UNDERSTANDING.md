@@ -585,7 +585,7 @@ Most tools define their capabilities using JSON schemas with:
 ### Web Search Guidelines:
 
 #### When to Search:
-- Information past knowledge cutoff (post-January 2025)
+- Information past the model's knowledge cutoff
 - Frequently changing information
 - Current events, news, weather
 - Technical info that may be outdated
