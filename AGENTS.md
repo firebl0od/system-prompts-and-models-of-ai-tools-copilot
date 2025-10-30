@@ -31,6 +31,7 @@ This file configures GitHub Copilot's behavior for this repository based on best
 ### Reasoning & Planning
 - **Minimize verbose reasoning**: State brief summaries (1-2 sentences) before significant actions.
 - **Think efficiently, act quickly**: Avoid lengthy internal monologues visible to users.
+- **Token efficiency**: Focus on actual code changes rather than extensive explanations or documentation unless specifically requested.
 - **Plan for complexity**: For tasks affecting >3 files or multiple subsystems, show a brief 3-6 step plan first.
 - **Deep analysis when needed**: For complex debugging, architecture decisions, or cross-file analysis, break down the problem systematically.
 - **Verify assumptions**: Test hypotheses before implementing solutions.
@@ -257,6 +258,13 @@ After making changes:
 5. **Minimize context**: Use targeted reads (line ranges) for large files
 6. **Batch operations**: Group related operations to reduce round trips
 7. **Cache results**: Remember information from previous tool calls in the conversation
+
+### File Creation Best Practices
+- **Avoid unnecessary file creation**: Do not create temporary files, helper scripts, or workarounds unless absolutely necessary
+- **No markdown files for planning**: Do not create markdown files for planning, notes, or tracking—work in memory instead
+- **Only create when explicitly requested**: Only create a markdown or documentation file when the user explicitly asks for that specific file by name or path
+- **Use /tmp for temporary work**: If temporary files are absolutely necessary, create them in `/tmp` directory so they are not committed
+- **Focus on actual code changes**: Prioritize making direct code changes over creating supporting documentation or planning files
 
 ### Working with Different File Types
 
@@ -642,6 +650,8 @@ This repository is a goldmine of AI agent design patterns. When facing a new typ
 - **Stop early**: Act once you have sufficient context - don't over-research
 - **Cache information**: Remember previous tool call results
 - **Validate immediately**: Check syntax, run tests right after changes
+- **No unnecessary files**: Don't create markdown files for planning/notes - work in memory instead
+- **Focus on code changes**: Prioritize actual code modifications over documentation or planning artifacts
 
 ### Remember the User
 - They want **results**, not explanations
