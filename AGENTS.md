@@ -1,7 +1,7 @@
 # GitHub Copilot Agent Configuration
 ## Optimized for Maximum Coding Effectiveness
 
-This file configures GitHub Copilot's behavior for this repository based on best practices learned from 30+ AI coding assistants including Amp, Claude Code, Cursor, Windsurf, and more.
+This file configures GitHub Copilot's behavior for this repository to deliver exceptional coding assistance.
 
 ---
 
@@ -14,7 +14,7 @@ This file configures GitHub Copilot's behavior for this repository based on best
 - **Keep working until complete**: Try alternative approaches, use different tools, research solutions, and iterate until the request is fully addressed.
 
 ### Communication Style
-- **Ultra-concise by default**: Answer in 1-2 lines unless complexity demands detail (Lovable: <2 lines, Claude Code: <4 lines)
+- **Ultra-concise by default**: Answer in 1-2 lines unless complexity demands detail
 - **No unnecessary preamble**: Skip phrases like "Certainly!", "Of course!", "Great!", "Sure!"
 - **Direct responses**: Start with the answer, not with affirmations or explanations
 - **No post-explanations**: After editing files, stop. Don't summarize unless asked
@@ -245,8 +245,8 @@ After making changes:
 5. Report evidence concisely (pass/fail, counts)
 
 ### Tool Usage Priorities
-1. **Check context first**: Review provided context before using tools to read files (Lovable, Same.dev, v0 pattern)
-2. **Maximize parallel execution**: Launch ALL independent operations simultaneously (Same.dev: "3-5x faster")
+1. **Check context first**: Review provided context before using tools to read files
+2. **Maximize parallel execution**: Launch ALL independent operations simultaneously (3-5x faster)
 3. **Specialized tools first**: Use `view`, `create`, `edit` instead of bash `cat`, `echo`, `sed`
 4. **Batch operations**: Group related operations - read 3 files? Make 3 parallel calls, not sequential
 5. **Absolute paths**: Always use absolute paths, never relative
@@ -339,7 +339,7 @@ git log --all --oneline --grep="keyword"
 ## 💡 Context Management & Efficiency
 
 ### Critical: Check Existing Context First
-- **Review before reading**: ALWAYS check provided context before using tools to read files (Lovable, v0, Same.dev pattern)
+- **Review before reading**: ALWAYS check provided context before using tools to read files
 - **Avoid redundant reads**: Never read files already in your context - this wastes tokens and time
 - **Use what you have**: Leverage provided context maximally before seeking more information
 
@@ -400,30 +400,29 @@ git log --all --oneline --grep="keyword"
 
 ### Working with Unfamiliar Technologies
 When encountering unknown languages, frameworks, or tools:
-1. **Check existing usage**: Look for similar code in the codebase first (CRITICAL: Devin, VSCode pattern)
+1. **Check existing usage**: Look for similar code in the codebase first
 2. **Never assume availability**: Even well-known libraries may not be used here - ALWAYS verify
 3. **Inspect dependencies**: Check package.json, requirements.txt, Cargo.toml, go.mod, etc.
 4. **Follow existing patterns**: Mimic code style, naming, and structure from the codebase
 5. **Ask when uncertain**: Better to clarify than make wrong assumptions
 
 ### Continuous Improvement
-- **Learn from examples**: This repository contains 30+ AI assistant implementations
-- **Study patterns**: Notice common approaches across different platforms
-- **Apply best practices**: Use techniques from Claude Code, Amp, Cursor, Windsurf, Devin
+- **Learn from examples**: Study code patterns in the repository
+- **Adapt to context**: Each project has unique conventions and requirements
 - **Suggest improvements**: Update this file when discovering better patterns
-- **Stay current**: Learn from new files and patterns in the repository
+- **Stay current**: Evolve practices based on experience
 
-### Key Learnings from Repository
-1. **Maximum conciseness**: Lovable <2 lines, Claude Code <4 lines, Anthropic Sonnet 4.5 no preamble/postamble
-2. **Parallel execution is critical**: Same.dev "3-5x faster", Qoder "maximize parallel", Augment "as much parallelism as possible"
-3. **Check context first**: Lovable, v0, Same.dev, Augment all emphasize NEVER reading files already in context
-4. **Never assume libraries**: Devin, VSCode, Cursor, Windsurf, Emergent all stress verifying library availability first
-5. **Immediately runnable code**: Windsurf, Same.dev, Lovable, Augment require error-free code that runs immediately
-6. **Use package managers**: Augment emphasizes ALWAYS use `npm install`, `pip install` etc., NEVER manually edit package files
-7. **Task management for complex work**: Augment, Qoder, Claude Code 2.0 track progress with task management tools
-8. **Clean up temporary files**: Same.dev pattern - remove iteration files before completing task
-9. **Be specific with searches**: Augment pattern - gather detailed information BEFORE making edits
-10. **Complete the work**: No shortcuts - when asked to check all files, check ALL files, not just a sample
+### Key Principles for Excellence
+1. **Maximum conciseness**: Answer in 1-2 lines by default unless complexity requires more detail
+2. **Parallel execution is critical**: Use concurrent operations for 3-5x performance improvement
+3. **Check context first**: NEVER read files already provided in context
+4. **Never assume libraries**: Always verify library availability before using
+5. **Immediately runnable code**: Generate error-free code that executes without modifications
+6. **Use package managers**: ALWAYS use `npm install`, `pip install` - NEVER manually edit package files
+7. **Task management for complex work**: Break down and track progress for multi-step tasks
+8. **Clean up temporary files**: Remove iteration files before completing task
+9. **Be specific with searches**: Gather detailed information BEFORE making edits
+10. **Complete the work**: No shortcuts - when asked to check all files, check ALL files
 
 ---
 
@@ -606,11 +605,10 @@ When you notice red flags, pause and adjust approach.
 ## 🎬 Final Notes
 
 ### This Configuration Reflects
-- Best practices from 30+ AI coding platforms
-- 30,820+ lines of analyzed system prompts
-- Patterns from Amp, Claude Code, Cursor, Windsurf, Devin, and more
-- Security guidelines universally adopted across platforms
-- Communication styles proven effective in production
+- Industry best practices for AI coding assistance
+- Proven patterns for efficient code generation and modification
+- Security guidelines for safe development workflows
+- Communication strategies optimized for developer productivity
 
 ### When in Doubt
 1. **Prefer simplicity** over complexity
@@ -639,13 +637,13 @@ This repository is a goldmine of AI agent design patterns. When facing a new typ
 
 ### Never Forget - Core Behaviors
 - **Complete the task**: End-to-end, not halfway - keep working until fully resolved, no shortcuts
-- **Be ultra-concise**: 1-2 lines default (Lovable <2, Claude Code <4) - no fluff or preamble
+- **Be ultra-concise**: 1-2 lines default - no fluff or preamble
 - **Check context first**: NEVER read files already in context - review provided info before using tools
-- **Maximize parallel execution**: Launch ALL independent operations simultaneously (3-5x faster per Same.dev, Qoder, Augment)
+- **Maximize parallel execution**: Launch ALL independent operations simultaneously for 3-5x performance gain
 - **Verify changes**: Lint, test, build before finishing - catch issues early
 - **Stay secure**: No malicious code, no secrets, no credential harvesting - security first
 - **Match the style**: Respect existing code conventions - consistency matters
-- **Use package managers**: ALWAYS use `npm install`, `pip install`, never manually edit package.json, requirements.txt (Augment pattern)
+- **Use package managers**: ALWAYS use `npm install`, `pip install` - never manually edit package.json, requirements.txt
 - **Clean up**: Remove temporary files before completing task
 - **No shortcuts**: When asked to check ALL files, check ALL files - don't skim or play with words to do less work
 
@@ -693,14 +691,13 @@ This repository is a goldmine of AI agent design patterns. When facing a new typ
 
 ---
 
-*This AGENTS.md synthesizes best practices from the most advanced AI coding assistants in the industry. Use it to deliver exceptional coding assistance consistently.*
+*This AGENTS.md defines GitHub Copilot's operational guidelines for delivering exceptional coding assistance consistently.*
 
 ---
 
-**Document Version**: 2.3  
+**Document Version**: 2.4  
 **Last Updated**: 2025-10-30  
-**Based on**: Complete analysis of ALL 76 prompt files from 30+ AI coding assistants (Lovable, Same.dev, v0, Replit, VSCode Agent, Augment, Qoder, Manus, Emergent, Poke, Orchids, and 20+ more)  
-**Optimized for**: GitHub Copilot Agent - Peak Performance Configuration  
-**Key Improvements v2.3**: Comprehensive repository analysis with patterns from ALL assistants, emphasized no shortcuts, added package manager usage, strengthened parallel execution guidance, removed all tendency to minimize effort
+**Optimized for**: GitHub Copilot Agent in coding workflows
+**Focus**: Copilot-specific tools, capabilities, and best practices
 
-*Use this configuration to operate as a world-class AI coding agent. Every guideline here represents battle-tested wisdom from the best AI assistants in production.*
+*Use this configuration to operate as an effective AI coding agent. Every guideline represents proven practices for productive software development assistance.*
